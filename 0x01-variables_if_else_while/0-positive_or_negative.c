@@ -4,6 +4,9 @@
 
 #include <stdio.h>
 
+/* more headers go there */
+
+/* betty style doc for function main goes there */
 
 /**
  * *Main - prints if number is positive, zero or negative
