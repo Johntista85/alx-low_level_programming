@@ -6,8 +6,7 @@
 
 /* betty style doc for function main goes there */
 /**
- * main - Enter point 
- *
+ * main - Enter point
  * Return: Always 0 (Success)
  */
 
