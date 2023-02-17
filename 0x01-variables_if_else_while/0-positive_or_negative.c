@@ -8,7 +8,7 @@
 
 /* betty style doc for function main goes there */
 /**
- * *Main - prints if number is positive, zero or negative
+ * Main - prints if number is positive, zero or negative
  * Return: always (success)
  *
  */
