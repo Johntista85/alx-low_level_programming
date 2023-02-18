@@ -10,7 +10,6 @@
 /**
  * Main - prints if number is positive, zero or negative
  * Return: always (success)
- *
  */
 
 int main(void)
