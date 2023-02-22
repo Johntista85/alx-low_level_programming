@@ -1,8 +1,10 @@
 #include "main.h"
 
 /**
- * print_sign - function that prints signs 
- * @c: function parametr 
+ * print_sign - function that prints signs
+ *
+ * @c: function parameter
+ *
  * Return: sign 1,0,-1
  */
 
