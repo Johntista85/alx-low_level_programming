@@ -2,7 +2,7 @@
 
 /**
  * main - main function
- * _putchar: print the alphabet in lowercase
+ * _putchar: print_alphabet in lowercase
  * Return: Always 0 (Success)
  */
 
