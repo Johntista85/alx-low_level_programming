@@ -2,7 +2,7 @@
 
 /**
  * main - main function
- * _putchar - function that prints the alphabet in lowercase
+ * _putchar: prints the alphabet in lowercase
  * Return: Always 0 (Success)
  */
 
@@ -10,7 +10,7 @@ void print_alphabet(void)
 {
 	char j;
 
-	for( j = 'a'; j <= 'z'; j++)
+	for (j = 'a'; j <= 'z'; j++)
 		_putchar(j);
 	_putchar('\n');
 }
