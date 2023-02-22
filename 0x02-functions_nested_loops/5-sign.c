@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_sign - function that prints signs
+ * print_sign: function c that prints signs
  *
  * @c: function parameter
  *
