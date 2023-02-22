@@ -2,7 +2,7 @@
 
 /**
  * Main function
- * _putchar - print the alphabate 
+ * _putchar - print the alphabate
  * return 0 (Success)
  */
 int main(void)
