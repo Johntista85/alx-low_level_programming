@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * _isdigi - Check if a letter is upper
- * @x: The number to be checked
+ * _isdigit - Check if a letter is upper
+ * @c: The number to be checked
  * Return: 1 for a character that will be a digit or 0 otherwise
  */
 
-int _isdigit(int x)
+int _isdigit(int c);
 {
-	if (x >= 48 && x <= 57)
+	if (c >= 48 && c <= 57)
 	{
 		return (1);
 	}
