@@ -2,7 +2,6 @@
 #include "main.h"
 
 /**
- * main - check the code
  * print_number - prints an integer.
  * @n: The integer to prins.
  * Return: Return: Always 0.
