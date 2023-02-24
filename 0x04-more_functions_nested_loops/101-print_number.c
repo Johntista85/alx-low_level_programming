@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * print_numbe - prints an integer number.
- * @n: The integer to print.
- * Return: Always 0 (Success)
+ * print_numbe - prints an integer.
+ * @n: The integer to prins.
+ * Return: Nothing!
  */
 
 void print_number(int n)
