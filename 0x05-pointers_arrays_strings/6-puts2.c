@@ -2,7 +2,7 @@
 
 /**
  * puts2 - rints every other character of the string
- * @str: the string to be treated 
+ * @str: the string to be treated
  * Return: Always 0 (Success)
  */
 
