@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * Rev_string - Reserses a strinf
- * @s: The string to be modified 
+ * rev_string - Reserses a strinf
+ * @s: The string to be modified
  * Return: Awlays 0 (Success)
  */
 
