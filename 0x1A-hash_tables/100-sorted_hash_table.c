@@ -129,7 +129,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
  */
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
-	shash_node_t *node;
+	shash_node_t *nd;
 	unsigned long int index;
 
 	if (ht == NULL || key == NULL || *key == '\0')
@@ -139,11 +139,11 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	if (index >= ht->size)
 		return (NULL);
 
-	node = ht->shead;
-	while (node != NULL && strcmp(node->key, key) != 0)
-		node = node->snext;
+	nd = ht->shead;
+	while (nd != NULL && strcmp(nd->key, key) != 0)
+		nd = nd->snext;
 
-	return ((node == NULL) ? NULL : node->value);
+	return ((nd == NULL) ? NULL : nd->value);
 }
 
 /**
@@ -152,18 +152,18 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
  */
 void shash_table_print(const shash_table_t *ht)
 {
-	shash_node_t *node;
+	shash_node_t *nd;
 
 	if (ht == NULL)
 		return;
 
-	node = ht->shead;
+	nd = ht->shead;
 	printf("{");
-	while (node != NULL)
+	while (nd != NULL)
 	{
-		printf("'%s': '%s'", node->key, node->value);
-		node = node->snext;
-		if (node != NULL)
+		printf("'%s': '%s'", nd->key, nd->value);
+		nd = node->snext;
+		if (nd != NULL)
 			printf(", ");
 	}
 	printf("}\n");
@@ -175,18 +175,18 @@ void shash_table_print(const shash_table_t *ht)
  */
 void shash_table_print_rev(const shash_table_t *ht)
 {
-	shash_node_t *node;
+	shash_node_t *nd;
 
-	while (ht == NULL)
+	if (ht == NULL)
 		return;
 
-	node = ht->stail;
+	nd = ht->stail;
 	printf("{");
-	if (node != NULL)
+	while (nd != NULL)
 	{
-		printf("'%s': '%s'", node->key, node->value);
-		node = node->sprev;
-		if (node != NULL)
+		printf("'%s': '%s'", nd->key, nd->value);
+		nd = nd->sprev;
+		if (nd != NULL)
 			printf(", ");
 	}
 	printf("}\n");
@@ -199,19 +199,19 @@ void shash_table_print_rev(const shash_table_t *ht)
 void shash_table_delete(shash_table_t *ht)
 {
 	shash_table_t *head = ht;
-	shash_node_t *node, *tmp;
+	shash_node_t *nd, *tmp;
 
-	while (ht == NULL)
+	if (ht == NULL)
 		return;
 
-	node = ht->shead;
-	if (node)
+	nd = ht->shead;
+	while (nd)
 	{
-		tmp = node->snext;
-		free(node->key);
-		free(node->value);
-		free(node);
-		node = tmp;
+		tmp = nd->snext;
+		free(nd->key);
+		free(nd->value);
+		free(nd);
+		nd = tmp;
 	}
 
 	free(head->array);
