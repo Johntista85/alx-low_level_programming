@@ -1,0 +1,2 @@
+all: main.c ALX.c
+	gcc main.c ALX.c -o ALX
