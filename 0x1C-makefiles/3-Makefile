@@ -1,0 +1,21 @@
+CC = gcc
+SRC = holberton.c main.c
+JB = $(SRC:%.c=%.o)
+NAME = holberton
+RM = rm -f
+
+%.o: %.c m.h
+	$(CC) -c -o $@ $<
+	
+all: $(JB)
+	$(CC) $(JB) -o $(NAME)
+	
+clean:
+	$(RM) *~ $(NAME)
+	
+oclean:
+	$(RM) $(JB)
+	
+fclean: clean oclean
+
+re: oclean all

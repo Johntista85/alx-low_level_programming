@@ -1,0 +1,11 @@
+CC = gcc
+SRC = main.c holberton.c
+JB = $(SRC:%.c=%.o)
+NAME = alx
+
+%.o: %.c m.h
+	$(CC) -c -o $@ $<
+	
+all: $(JB)
+	$(CC) $(JB) -o $(NAME)
+
